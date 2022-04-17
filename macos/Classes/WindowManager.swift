@@ -59,39 +59,15 @@ public class WindowManager: NSObject, NSWindowDelegate {
 
     }
 
-    override func myKeyDownEvent(event: NSEvent) -> NSEvent {
-        
+    func myKeyDownEvent(event: NSEvent) -> NSEvent? {
         if (event.characters == "q") && event.modifierFlags.contains(.command) {
             print("Comand Q")
-            
-
-            //  return event
+            return nil
         }
 
         return event
-        // if event.modifierFlags.contains(.command) {
-        //     switch event.charactersIgnoringModifiers! {
-        //     case "q":
-        //         print("Command W")
-        //     default:
-        //         break
-        //     }
-        // }
-        
     }
 
-    // override func keyDown(theEvent: (NSEvent!))
-    // {
-    //     if theEvent.modifierFlags.contains(.CommandKeyMask) {
-    //         switch theEvent.charactersIgnoringModifiers! {
-    //         case "w":
-    //             print("Command W")
-    //         default:
-    //             break
-    //         }
-    //     }
-    // }
-    
     public func waitUntilReadyToShow() {
         // nothing
     }
